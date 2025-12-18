@@ -1,73 +1,65 @@
-# Welcome to your Lovable project
+# 📊 Result Analyzer
 
-## Project info
+A modern web application that converts raw academic result text into clean, structured, and searchable data with a premium SaaS-style interface.
 
-**URL**: https://lovable.dev/projects/1fd59dac-355f-41c8-9b17-1c6a5f839d73
+## 🚀 Overview
 
-## How can I edit this code?
+**Result Analyzer** is designed to simplify academic result analysis.  
+Users can paste unformatted result tables (such as university or college result sheets), and the system intelligently parses the data to present it in an organized, easy-to-understand format.
 
-There are several ways of editing your application.
+The application focuses on speed, accuracy, and usability, making it suitable for real-world academic environments.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1fd59dac-355f-41c8-9b17-1c6a5f839d73) and start prompting.
+## ✨ Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- 🔍 Smart parsing of raw result text
+- 👨‍🎓 Student-wise result extraction
+- 🔎 Search by roll number, student name, or ID
+- 📊 Clean and structured result view
+- 📈 Easy comparison and analysis
+- 🌙 Premium dark-themed UI
+- 📱 Fully responsive (desktop & mobile)
+- ⚡ Fast and lightweight performance
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🧑‍💻 Use Cases
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Colleges and universities
+- Teachers and academic staff
+- Students analyzing their results
+- Anyone working with bulk academic data
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🛠 Tech Stack
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **Frontend:** React + Vite
+- **Styling:** Tailwind CSS
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **UI Design:** Modern SaaS-inspired layout
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 🌐 Live Demo
+
+👉 https://result-analyzer-one.vercel.app/ *(update if deployed elsewhere)*
+
+---
+
+## 📂 Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/tridipsamanta/Result-Analyzer.git
+
+# Navigate to the project directory
+cd Result-Analyzer
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/1fd59dac-355f-41c8-9b17-1c6a5f839d73) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
