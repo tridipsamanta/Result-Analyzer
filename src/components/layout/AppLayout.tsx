@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import { Navbar } from './Navbar';
-
 interface AppLayoutProps {
   children: ReactNode;
 }

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
 
 interface SgpaDistributionChartProps {
@@ -14,19 +15,30 @@ const COLORS = [
 ];
 
 export function SgpaDistributionChart({ distribution }: SgpaDistributionChartProps) {
+  const [viewport, setViewport] = useState(() => (typeof window !== 'undefined' ? window.innerWidth : 1024));
+
+  useEffect(() => {
+    const onResize = () => setViewport(window.innerWidth);
+    window.addEventListener('resize', onResize, { passive: true });
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
+  const containerHeight = viewport < 640 ? 260 : viewport < 768 ? 300 : 320;
+  const radius = viewport < 640 ? { inner: 50, outer: 90 } : { inner: 60, outer: 110 };
+
   const data = distribution.filter(d => d.count > 0);
   
   if (data.length === 0) {
     return (
-      <div className="h-[300px] flex items-center justify-center text-muted-foreground">
+      <div className="h-[260px] sm:h-[300px] flex items-center justify-center text-muted-foreground">
         No data available
       </div>
     );
   }
   
   return (
-    <div className="h-[300px] w-full">
-      <ResponsiveContainer width="100%" height="100%">
+    <div className="w-full" style={{ minHeight: containerHeight }}>
+      <ResponsiveContainer width="100%" height={containerHeight}>
         <PieChart>
           <Pie
             data={data}
@@ -34,8 +46,8 @@ export function SgpaDistributionChart({ distribution }: SgpaDistributionChartPro
             nameKey="range"
             cx="50%"
             cy="50%"
-            outerRadius={100}
-            innerRadius={60}
+            outerRadius={radius.outer}
+            innerRadius={radius.inner}
             paddingAngle={2}
             label={({ range, count, percent }) => 
               percent > 0.05 ? `${count}` : ''
